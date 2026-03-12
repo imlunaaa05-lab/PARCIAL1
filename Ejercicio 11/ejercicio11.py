@@ -1,30 +1,23 @@
-class Motor:
-    def __init__(self, serie, tipo):
-        self.serie = serie
-        self.tipo = tipo
+class Material:
+    def __init__(self, titulo):
+        self.titulo = titulo
 
-    def __str__(self):
-        return f"{self.tipo} (Serie: {self.serie})"
+class CursoAcademico:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.materiales = []
 
-class Automovil:
-    def __init__(self, marca):
-        self.marca = marca
-        self.motor = None # Inicia sin motor
+    def agregar_material(self, material):
+        self.materiales.append(material)
 
-    # Agregación: Recibe el objeto motor externo
-    def instalar_motor(self, motor):
-        self.motor = motor
+# Prueba
+video = Material("Video Tutorial Python")
+doc = Material("Documentación Oficial")
+curso = CursoAcademico("Programación II")
 
-# --- PRUEBA ---
-if __name__ == "__main__":
-    # Motor independiente
-    motor_electrico = Motor("E-500", "Eléctrico")
+curso.agregar_material(video)
+curso.agregar_material(doc)
 
-    tesla = Automovil("Tesla Model S")
-    
-    # Se agrega la parte al todo
-    tesla.instalar_motor(motor_electrico)
-
-    # Verificación
-    print(f"Coche: {tesla.marca}")
-    print(f"Estado del motor: {tesla.motor}")
+print(f"Curso: {curso.nombre}")
+for m in curso.materiales:
+    print(f" * {m.titulo}")
