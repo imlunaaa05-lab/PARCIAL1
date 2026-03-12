@@ -1,56 +1,42 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Ciudad {
+class Doctor {
     private String nombre;
-    private int poblacion;
-
-    public Ciudad(String nombre, int poblacion) {
-        this.nombre = nombre;
-        this.poblacion = poblacion;
-    }
-
-    public String getInfo() {
-        return nombre + " (Población: " + poblacion + ")";
-    }
+    public Doctor(String nombre) { this.nombre = nombre; }
+    public String getNombre() { return nombre; }
 }
 
-class Pais {
-    private String nombre;
-    private List<Ciudad> ciudades;
+class Hospital {
+    private String nombreHospital;
+    private List<Doctor> personalMedico;
 
-    public Pais(String nombre) {
-        this.nombre = nombre;
-        this.ciudades = new ArrayList<>();
+    public Hospital(String nombre) {
+        this.nombreHospital = nombre;
+        this.personalMedico = new ArrayList<>();
     }
 
-    // Agregación: Se añade una ciudad que ya existe
-    public void agregarCiudad(Ciudad c) {
-        this.ciudades.add(c);
+    public void contratarDoctor(Doctor d) {
+        this.personalMedico.add(d);
     }
 
-    public void mostrarTerritorio() {
-        System.out.println("País: " + nombre);
-        for (Ciudad c : ciudades) {
-            System.out.println(" -> " + c.getInfo());
+    public void mostrarStaff() {
+        System.out.println("Hospital: " + nombreHospital);
+        for (Doctor d : personalMedico) {
+            System.out.println(" -> Dr. " + d.getNombre());
         }
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        // 1. Las ciudades existen antes de ser asignadas a un país
-        Ciudad c1 = new Ciudad("Bogotá", 8000000);
-        Ciudad c2 = new Ciudad("Medellín", 2500000);
+        Doctor doc1 = new Doctor("García");
+        Doctor doc2 = new Doctor("Rodríguez");
 
-        // 2. Se crea el país
-        Pais colombia = new Pais("Colombia");
+        Hospital hosp = new Hospital("Hospital Central");
+        hosp.contratarDoctor(doc1);
+        hosp.contratarDoctor(doc2);
 
-        // 3. Agregación
-        colombia.agregarCiudad(c1);
-        colombia.agregarCiudad(c2);
-
-        // 4. Corroborar
-        colombia.mostrarTerritorio();
+        hosp.mostrarStaff();
     }
 }
