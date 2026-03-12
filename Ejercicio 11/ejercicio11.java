@@ -1,52 +1,42 @@
-class Motor {
-    private String serie;
-    private String tipo;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Motor(String serie, String tipo) {
-        this.serie = serie;
-        this.tipo = tipo;
-    }
-
-    public String getDetalles() {
-        return tipo + " (Serie: " + serie + ")";
-    }
+class Material {
+    private String titulo;
+    public Material(String titulo) { this.titulo = titulo; }
+    public String getTitulo() { return titulo; }
 }
 
-class Automovil {
-    private String marca;
-    private Motor motor; // El automóvil "tiene un" motor
+class CursoAcademico {
+    private String nombre;
+    private List<Material> materiales;
 
-    public Automovil(String marca) {
-        this.marca = marca;
+    public CursoAcademico(String nombre) {
+        this.nombre = nombre;
+        this.materiales = new ArrayList<>();
     }
 
-    // Agregación: Se asigna un motor que ya existe
-    public void instalarMotor(Motor m) {
-        this.motor = m;
+    public void agregarMaterial(Material m) {
+        this.materiales.add(m);
     }
 
-    public void mostrarEspecificaciones() {
-        System.out.println("Vehículo: " + marca);
-        if (motor != null) {
-            System.out.println(" -> Motor: " + motor.getDetalles());
-        } else {
-            System.out.println(" -> Sin motor instalado.");
+    public void mostrarCurso() {
+        System.out.println("Curso: " + nombre);
+        for (Material m : materiales) {
+            System.out.println(" - Material: " + m.getTitulo());
         }
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        // 1. El motor existe antes que el coche
-        Motor motorV8 = new Motor("V8-990", "Gasolina");
+        Material v1 = new Material("Video: Introducción a UML");
+        Material d1 = new Material("PDF: Guía de Agregación");
 
-        // 2. Se crea el coche
-        Automovil miCoche = new Automovil("Ford Mustang");
+        CursoAcademico curso = new CursoAcademico("Diseño de Software");
+        curso.agregarMaterial(v1);
+        curso.agregarMaterial(d1);
 
-        // 3. Se agrega el motor (Agregación)
-        miCoche.instalarMotor(motorV8);
-
-        // 4. Corroborar
-        miCoche.mostrarEspecificaciones();
+        curso.mostrarCurso();
     }
 }
