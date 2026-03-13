@@ -24,7 +24,7 @@ class Biblioteca {
         this.coleccion = new ArrayList<>();
     }
 
-    // Agregación: Recibe un objeto que ya existe fuera
+  
     public void agregarLibro(Libro l) {
         this.coleccion.add(l);
     }
@@ -39,18 +39,18 @@ class Biblioteca {
 
 public class Main {
     public static void main(String[] args) {
-        // 1. Los libros existen antes que la biblioteca
+      
         Libro libro1 = new Libro("Cien años de soledad", "978-3");
         Libro libro2 = new Libro("Don Quijote", "978-8");
 
-        // 2. Se crea la biblioteca
+       
         Biblioteca miBiblioteca = new Biblioteca("Biblioteca Central");
 
-        // 3. Agregación: Se añaden los libros
+      
         miBiblioteca.agregarLibro(libro1);
         miBiblioteca.agregarLibro(libro2);
 
-        // 4. Corroborar
+      
         miBiblioteca.mostrarCatalogo();
     }
 }
