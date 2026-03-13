@@ -22,7 +22,7 @@ class Carrito {
         this.listaItems = new ArrayList<>();
     }
 
-    // Composición: El Carrito instancia el Item con los datos recibidos
+  
     public void agregarAlCarrito(String nombreProd, int cant) {
         this.listaItems.add(new Item(nombreProd, cant));
     }
@@ -43,7 +43,7 @@ public class Main {
     public static void main(String[] args) {
         Carrito miCarrito = new Carrito();
         
-        // La creación del objeto Item ocurre internamente
+        
         miCarrito.agregarAlCarrito("Zapatillas Running", 1);
         miCarrito.agregarAlCarrito("Medias Deportivas", 3);
 
