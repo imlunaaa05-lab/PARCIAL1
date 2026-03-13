@@ -10,7 +10,7 @@ class Hospital:
     def vincular_doctor(self, doctor):
         self.staff.append(doctor)
 
-# Prueba
+
 dr1 = Doctor("Pérez")
 dr2 = Doctor("López")
 mi_hospital = Hospital("Clínica San José")
