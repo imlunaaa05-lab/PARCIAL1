@@ -24,7 +24,7 @@ class Factura {
         this.detalles = new ArrayList<>();
     }
 
-    // Composición: La factura crea el detalle internamente
+    
     public void agregarDetalle(String producto, double precio) {
         DetalleFactura nuevoDetalle = new DetalleFactura(producto, precio);
         this.detalles.add(nuevoDetalle);
@@ -42,7 +42,7 @@ public class Main {
     public static void main(String[] args) {
         Factura f1 = new Factura(1001);
         
-        // Los datos se pasan para que la factura cree sus propias partes
+     
         f1.agregarDetalle("Monitor LED", 150.0);
         f1.agregarDetalle("Teclado", 30.0);
 
