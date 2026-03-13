@@ -36,14 +36,14 @@ class Profesor {
 
 public class Main {
     public static void main(String[] args) {
-        // 1. Crear objetos independientes
+     
         Profesor prof1 = new Profesor("Javier Ochoa");
         Profesor prof2 = new Profesor("Ana Milena");
 
         Asignatura asig1 = new Asignatura("Diseño de Software");
         Asignatura asig2 = new Asignatura("Programación III");
 
-        // 2. Establecer la Asociación (Muchos a Muchos)
+       
         prof1.asignarAsignatura(asig1);
         asig1.agregarProfesor(prof1);
 
@@ -53,7 +53,7 @@ public class Main {
         prof2.asignarAsignatura(asig1);
         asig1.agregarProfesor(prof2);
 
-        // 3. Corroborar funcionamiento
+      
         System.out.println("Asignatura: " + asig1.getNombre());
         for (Profesor p : asig1.getProfesores()) {
             System.out.println(" -> Dictada por: " + p.getNombre());
