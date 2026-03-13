@@ -7,12 +7,12 @@ class Carrito:
     def __init__(self):
         self.items = []
 
-    # Composición: El carrito crea sus propios items
+  
     def agregar_producto(self, nombre, cantidad):
         nuevo_item = Item(nombre, cantidad)
         self.items.append(nuevo_item)
 
-# --- PRUEBA ---
+
 if __name__ == "__main__":
     compra = Carrito()
     
