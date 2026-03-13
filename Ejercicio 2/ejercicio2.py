@@ -10,24 +10,22 @@ class Doctor:
     def atender_paciente(self, paciente):
         self.pacientes.append(paciente)
 
-# --- PRUEBA DE FUNCIONAMIENTO ---
 if _name_ == "_main_":
-    # 1. Instancias de Doctores
+   
     doc_a = Doctor("Dr. Garcia")
     doc_b = Doctor("Dra. Blanco")
 
-    # 2. Instancias de Pacientes
+  
     p1 = Paciente("Elena Nito")
     p2 = Paciente("Alan Brito")
     p3 = Paciente("Susana Oria")
 
-    # 3. Demostración de Asociación
     doc_a.atender_paciente(p1)
     doc_a.atender_paciente(p2)
     doc_b.atender_paciente(p3)
     doc_b.atender_paciente(p1) # Elena (p1) tiene cita con ambos doctores
 
-    # 4. Corroborar salida
+   
     doctores = [doc_a, doc_b]
     for d in doctores:
         print(f"Lista de atención del {d.nombre}:")
