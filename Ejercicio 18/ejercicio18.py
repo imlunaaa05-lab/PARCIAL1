@@ -12,7 +12,7 @@ class Examen:
         nueva_pregunta = Pregunta(texto)
         self.preguntas.append(nueva_pregunta)
 
-# --- PRUEBA ---
+
 if __name__ == "__main__":
     evaluacion = Examen("Inteligencia Artificial")
     
