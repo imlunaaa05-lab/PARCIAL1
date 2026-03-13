@@ -26,22 +26,22 @@ class Doctor {
 
 public class Main {
     public static void main(String[] args) {
-        // 1. Crear varios Doctores (Independientes)
+       
         Doctor doc1 = new Doctor("Dr. Smith (Cardiología)");
         Doctor doc2 = new Doctor("Dra. Quinn (General)");
 
-        // 2. Crear varios Pacientes (Independientes)
+       
         Paciente p1 = new Paciente("Carlos Ruiz");
         Paciente p2 = new Paciente("Marta Soto");
         Paciente p3 = new Paciente("Luis Peña");
 
-        // 3. Establecer relaciones múltiples
-        doc1.atenderPaciente(p1); // Smith atiende a Carlos
-        doc1.atenderPaciente(p2); // Smith atiende a Marta
-        doc2.atenderPaciente(p3); // Quinn atiende a Luis
-        doc2.atenderPaciente(p1); // Carlos también consulta con la Dra. Quinn (Asociación)
+       
+        doc1.atenderPaciente(p1); 
+        doc1.atenderPaciente(p2);
+        doc2.atenderPaciente(p3); 
+        doc2.atenderPaciente(p1); 
 
-        // 4. Corroborar funcionamiento
+     
         imprimirReporte(doc1);
         imprimirReporte(doc2);
     }
