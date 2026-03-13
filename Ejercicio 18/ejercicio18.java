@@ -22,7 +22,7 @@ class Examen {
         this.preguntas = new ArrayList<>();
     }
 
-    // Composición: El Examen crea la instancia de Pregunta
+  
     public void añadirPregunta(String texto) {
         this.preguntas.add(new Pregunta(texto));
     }
@@ -39,7 +39,7 @@ public class Main {
     public static void main(String[] args) {
         Examen parcial = new Examen("Fundamentos de Software");
         
-        // El Examen controla la creación de sus partes
+      
         parcial.añadirPregunta("¿Qué es la composición en POO?");
         parcial.añadirPregunta("Diferencia entre Java y Python en memoria.");
 
