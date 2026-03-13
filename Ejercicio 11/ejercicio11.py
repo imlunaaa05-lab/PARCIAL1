@@ -10,7 +10,7 @@ class CursoAcademico:
     def agregar_material(self, material):
         self.materiales.append(material)
 
-# Prueba
+
 video = Material("Video Tutorial Python")
 doc = Material("Documentación Oficial")
 curso = CursoAcademico("Programación II")
