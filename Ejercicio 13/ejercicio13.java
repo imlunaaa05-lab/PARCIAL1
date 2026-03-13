@@ -24,7 +24,7 @@ class Tienda {
         this.inventario = new ArrayList<>();
     }
 
-    // Agregación: El producto ya existe y se añade a la tienda
+
     public void agregarProducto(Producto p) {
         this.inventario.add(p);
     }
@@ -39,13 +39,13 @@ class Tienda {
 
 public class Main {
     public static void main(String[] args) {
-        // Los productos se crean independientemente
+      
         Producto p1 = new Producto("Laptop", 1200.0);
         Producto p2 = new Producto("Mouse", 25.0);
 
         Tienda miTienda = new Tienda("TecnoShop");
         
-        // Se agregan a la tienda
+        
         miTienda.agregarProducto(p1);
         miTienda.agregarProducto(p2);
 
