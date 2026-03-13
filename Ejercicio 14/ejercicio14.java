@@ -24,7 +24,7 @@ class Escuela {
         this.salones = new ArrayList<>();
     }
 
-    // Agregación: Recibe el salón ya creado
+
     public void agregarSalon(Salon s) {
         this.salones.add(s);
     }
@@ -39,13 +39,13 @@ class Escuela {
 
 public class Main {
     public static void main(String[] args) {
-        // Los salones existen independientemente
+       
         Salon s101 = new Salon("101-A", 30);
         Salon s202 = new Salon("202-B", 25);
 
         Escuela miEscuela = new Escuela("Colegio Mayor");
         
-        // Se agregan a la escuela
+     
         miEscuela.agregarSalon(s101);
         miEscuela.agregarSalon(s202);
 
