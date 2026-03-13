@@ -8,12 +8,12 @@ class Pedido:
         self.id_pedido = id_pedido
         self.detalles = []
 
-    # Composición: Se crean los detalles dentro del método
+    
     def agregar_producto(self, nombre, cantidad):
         nuevo_detalle = DetallePedido(nombre, cantidad)
         self.detalles.append(nuevo_detalle)
 
-# --- PRUEBA ---
+
 if __name__ == "__main__":
     pedido_app = Pedido(901)
     
