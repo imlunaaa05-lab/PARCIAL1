@@ -20,7 +20,7 @@ class Universidad {
         this.facultades = new ArrayList<>();
     }
 
-    // Agregación: La facultad se crea fuera y se añade aquí
+  
     public void agregarFacultad(Facultad f) {
         this.facultades.add(f);
     }
@@ -35,18 +35,17 @@ class Universidad {
 
 public class Main {
     public static void main(String[] args) {
-        // 1. Crear las partes primero (Facultades)
+      
         Facultad f1 = new Facultad("Ingeniería");
         Facultad f2 = new Facultad("Ciencias de la Salud");
 
-        // 2. Crear el todo (Universidad)
         Universidad miUni = new Universidad("Universidad Nacional");
 
-        // 3. Establecer Agregación
+     
         miUni.agregarFacultad(f1);
         miUni.agregarFacultad(f2);
 
-        // 4. Corroborar
+      
         miUni.mostrarEstructura();
     }
 }
