@@ -24,7 +24,7 @@ class Pedido {
         this.detalles = new ArrayList<>();
     }
 
-    // Composición: El Pedido crea el Detalle internamente
+  
     public void agregarItem(String nombre, int cant) {
         this.detalles.add(new DetallePedido(nombre, cant));
     }
@@ -41,7 +41,7 @@ public class Main {
     public static void main(String[] args) {
         Pedido miPedido = new Pedido(778);
         
-        // No pasamos objetos creados, pasamos datos para que el pedido los cree
+     
         miPedido.agregarItem("Pizza Familiar", 2);
         miPedido.agregarItem("Refresco 2L", 1);
 
