@@ -26,21 +26,21 @@ class Departamento {
 
 public class Main {
     public static void main(String[] args) {
-        // 1. Crear Empleados independientes
+        
         Empleado emp1 = new Empleado("Ricardo Gomez");
         Empleado emp2 = new Empleado("Ana Martinez");
         Empleado emp3 = new Empleado("Julian Toro");
 
-        // 2. Crear Departamentos
+
         Departamento deptoIT = new Departamento("Sistemas");
         Departamento deptoRRHH = new Departamento("Recursos Humanos");
 
-        // 3. Establecer la Asociación
+      
         deptoIT.asignarEmpleado(emp1);
         deptoIT.asignarEmpleado(emp2);
         deptoRRHH.asignarEmpleado(emp3);
 
-        // 4. Reporte
+       
         mostrarDatos(deptoIT);
         mostrarDatos(deptoRRHH);
     }
