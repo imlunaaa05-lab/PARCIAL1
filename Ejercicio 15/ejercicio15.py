@@ -8,12 +8,12 @@ class Factura:
         self.numero = numero
         self.detalles = []
 
-    # Composición: Se instancian los detalles dentro del método
+
     def agregar_item(self, producto, precio):
         nuevo_item = DetalleFactura(producto, precio)
         self.detalles.append(nuevo_item)
 
-# --- PRUEBA DE FUNCIONAMIENTO ---
+
 if __name__ == "__main__":
     mi_factura = Factura(505)
     
